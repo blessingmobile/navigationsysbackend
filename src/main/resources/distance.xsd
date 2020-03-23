@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="www.blessingmobile.com/navigationsys/gen"
+           targetNamespace="www.blessingmobile.com/navigationsys/gen" elementFormDefault="qualified">
+
+    <xs:element name="getDistanceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="origin" type="xs:string"/>
+                <xs:element name="destination" type="xs:string"/>
+                <xs:element name="trafficEnabled" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDistanceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="distance" type="tns:distance"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="distance">
+        <xs:sequence>
+            <xs:element name="pathdistance" type="xs:decimal"/>
+            <xs:element name="directions" type="xs:string"/>
+         </xs:sequence>
+
+    </xs:complexType>
+
+</xs:schema>
