@@ -12,6 +12,9 @@ Step 2
 
 Please find steps to run the Navigation System below.
 
+First paste the excel HR-Offsite_AssignmentV3_0.xlsx to the root folder of this project. The test cases use this file, therefore the tests will fail and 
+the application will fail to startup if this file is not there. Alternatively you can comment out the test cases... Thereafter please run command below:
+
 mvn spring-boot:run
 
 Step 3 
